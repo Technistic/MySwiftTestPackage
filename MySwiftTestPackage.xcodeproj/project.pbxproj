@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		69E73CC92DE2778400618E91 /* MySwiftTestPackage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySwiftTestPackage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E73CD42DE2778400618E91 /* MySwiftTestPackageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySwiftTestPackageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E73CE32DE277DC00618E91 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = ../MyLibrary; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -60,6 +61,7 @@
 		69E73CBF2DE2778400618E91 = {
 			isa = PBXGroup;
 			children = (
+				69E73CE32DE277DC00618E91 /* MyLibrary */,
 				69E73CCB2DE2778400618E91 /* MySwiftTestPackage */,
 				69E73CD82DE2778400618E91 /* MySwiftTestPackageTests */,
 				69E73CCA2DE2778400618E91 /* Products */,
