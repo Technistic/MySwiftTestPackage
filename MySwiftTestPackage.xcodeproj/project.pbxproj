@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69E73CD52DE2778400618E91 /* MySwiftTestPackage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E73CC92DE2778400618E91 /* MySwiftTestPackage.framework */; };
+		69E73CEC2DE4A37A00618E91 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 69E73CEB2DE4A37A00618E91 /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,11 @@
 		69E73CC92DE2778400618E91 /* MySwiftTestPackage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySwiftTestPackage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E73CD42DE2778400618E91 /* MySwiftTestPackageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySwiftTestPackageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E73CE32DE277DC00618E91 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = ../MyLibrary; sourceTree = SOURCE_ROOT; };
+		69E73CE72DE42B4400618E91 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		69E73CE82DE4A03300618E91 /* ci_site_deploy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_site_deploy.sh; sourceTree = "<group>"; };
+		69E73CE92DE4A11300618E91 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
+		69E73CEA2DE4A14B00618E91 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		69E73CEB2DE4A37A00618E91 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -61,6 +67,8 @@
 		69E73CBF2DE2778400618E91 = {
 			isa = PBXGroup;
 			children = (
+				69E73CEB2DE4A37A00618E91 /* Documentation.docc */,
+				69E73CE62DE42A8D00618E91 /* ci_scripts */,
 				69E73CE32DE277DC00618E91 /* MyLibrary */,
 				69E73CCB2DE2778400618E91 /* MySwiftTestPackage */,
 				69E73CD82DE2778400618E91 /* MySwiftTestPackageTests */,
@@ -75,6 +83,17 @@
 				69E73CD42DE2778400618E91 /* MySwiftTestPackageTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		69E73CE62DE42A8D00618E91 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				69E73CE72DE42B4400618E91 /* ci_pre_xcodebuild.sh */,
+				69E73CE82DE4A03300618E91 /* ci_site_deploy.sh */,
+				69E73CE92DE4A11300618E91 /* ci_post_xcodebuild.sh */,
+				69E73CEA2DE4A14B00618E91 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E73CEC2DE4A37A00618E91 /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#  ci_post_xcodebuild.sh
+#  MySwiftTestPackage
+#
+#  Created by Michael Logothetis on 26/5/2025.
+#  
+xcodebuild -project MySwiftTestPackage.xcodeproj -derivedDataPath docsData -scheme MySwiftTestPackage -destination 'platform=iOS Simulator,name=iPhone 16' -parallelizeTargets docbuild
+
+echo "Copying DocC archives to doc_archives..."
+mkdir doc_archives
+cp -R `find docsData -type d -name "*.doccarchive"` doc_archives
+
+$(xcrun --find docc) process-archive transform-for-static-hosting "$ARCHIVE" --hosting-base-path MySwiftTestPackage/$ARCHIVE_NAME --output-path docs/$ARCHIVE_NAME
+
+./ci_site_deploy.sh
