@@ -5,7 +5,7 @@
 #
 #  Created by Michael Logothetis on 26/5/2025.
 #  
-xcodebuild -project MySwiftTestPackage.xcodeproj -derivedDataPath docsData -scheme MySwiftTestPackage -destination 'platform=iOS Simulator,name=iPhone 16' -parallelizeTargets docbuild
+xcodebuild -project ../MySwiftTestPackage.xcodeproj -derivedDataPath docsData -scheme MySwiftTestPackage -destination 'platform=iOS Simulator,name=iPhone 16' -parallelizeTargets docbuild
 
 echo "Copying DocC archives to doc_archives..."
 mkdir doc_archives
