@@ -10,7 +10,7 @@
 git config user.name "$DOCC_GITHUB_NAME"
 git config user.email "$DOCC_GITHUB_EMAIL"
 # Change the GitHub URL to your repository
-git remote set-url origin https://$DOCC_GITHUB_USERNAME:$DOCC_GITHUB_API_TOKEN@github.com/Technistic/ImageDataPicker/
+git remote set-url origin https://$DOCC_GITHUB_USERNAME:$DOCC_GITHUB_API_TOKEN@github.com/Technistic/MySwiftTestPackage
 git fetch
 git stash push -u  -- docs doc_archives
 git checkout feature/docc-hosting
