@@ -13,12 +13,12 @@ echo "Building DocC documentation for ModularSlothCreator..."
 xcodebuild -project ../MySwiftTestPackage.xcodeproj -derivedDataPath docsData -scheme MySwiftTestPackage -destination 'platform=iOS Simulator,name=iPhone 16' -parallelizeTargets docbuild
 
 echo "Copying DocC archives to doc_archives..."
-mkdir doc_archives
-cp -R `find docsData -type d -name "*.doccarchive"` doc_archives
+mkdir ../doc_archives
+cp -R `find docsData -type d -name "*.doccarchive"` ../doc_archives
 
-mkdir docs
+mkdir ../docs
 
-for ARCHIVE in doc_archives/*.doccarchive; do
+for ARCHIVE in ../doc_archives/*.doccarchive; do
     cmd() {
         echo "$ARCHIVE" | awk -F'.' '{print $1}' | awk -F'/' '{print tolower($2)}'
     }
